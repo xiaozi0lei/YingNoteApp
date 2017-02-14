@@ -23,7 +23,7 @@ let mainWindow = null;
 const shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
     // Someone tried to run a second instance, we should focus our window.
     if (mainWindow) {
-        //mainWindow.show();
+        mainWindow.show();
         if (mainWindow.isMinimized()) {
             mainWindow.restore();
         }
@@ -46,11 +46,10 @@ app.on('window-all-closed', function () {
 app.on('open-file', function (e) {
     // console.log('reopen');
     if (mainWindow) {
-        //mainWindow.show();
-        if (mainWindow.isMinimized()) {
-            mainWindow.restore();
-        }
+        mainWindow.show();
         mainWindow.focus();
+    } else {
+        openIt();
     }
 });
 
@@ -59,11 +58,11 @@ app.on('open-file', function (e) {
 app.on('activate', function () {
     console.log('activate');
     if (mainWindow) {
-        //mainWindow.show();
-        if (mainWindow.isMinimized()) {
-            mainWindow.restore();
-        }
-        mainWindow.focus();
+        mainWindow.show();
+        // if (mainWindow.isMinimized()) {
+        //     mainWindow.restore();
+        // }
+        // mainWindow.focus();
     }
     // 有时, 重启电脑会出现这种情况
     // Cannot create BrowserWindow before app is ready
