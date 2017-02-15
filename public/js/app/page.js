@@ -1529,7 +1529,7 @@ function initPage(initedCallback) {
                     if (err) {
                     	if (typeof err == 'object') {
 	                    	if(err['Msg'] == 'NOTLOGIN') {
-	                    		alert(getMsg('You need to sign in Leanote'));
+	                    		alert(getMsg('You need to sign in YingNote'));
 	                    		toLogin();
 	                    		return;
 							}
@@ -1897,9 +1897,9 @@ function checkForUpdates() {
 function setMacTopMenu() {
     var isMac_ = isMac();
     var template = [{
-        label: 'Leanote',
+        label: 'YingNote',
         submenu: [{
-            label: 'About Leanote',
+            label: 'About YingNote',
             selector: 'orderFrontStandardAboutPanel:'
         }, {
             type: 'separator'
@@ -1909,7 +1909,7 @@ function setMacTopMenu() {
         }, {
             type: 'separator'
         }, {
-            label: 'Hide Leanote',
+            label: 'Hide YintNote',
             accelerator: 'Command+H',
             selector: 'hide:'
         }, {
@@ -2026,7 +2026,7 @@ function setMacTopMenu() {
 
 function getShortHost(host) {
     if (!host) {
-        host = 'https://leanote.com';
+        host = 'https://yingnote.cn';
     }
     var ret = /http(s*):\/\/([a-zA-Z0-9\.\-]+)/.exec(host);
     if (ret && ret.length == 3) {
@@ -2089,7 +2089,7 @@ function userMenu(allUsers) {
     function menu() {
         var me = this;
         // this.target = '';
-        UserInfo.Host = UserInfo.Host || 'https://leanote.com';
+        UserInfo.Host = UserInfo.Host || 'https://yingnote.cn';
         var shortHost = getShortHost(UserInfo.Host);
 
         this.menu = new gui.Menu();

@@ -429,7 +429,7 @@ function _setEditorContent(content, isMarkdown, preview, callback) {
 		} else {
 			// 还要清空preview
 			if(MarkdownEditor) {
-				$("#wmd-preview").html(previewToken + "<div style='text-align:center; padding: 10px 0;'><img src='http://leanote.com/images/loading-24.gif' /> 正在转换...</div>");
+				$("#wmd-preview").html(previewToken + "<div style='text-align:center; padding: 10px 0;'><img src='https://yingnote.cn/images/loading-24.gif' /> 正在转换...</div>");
 				MarkdownEditor.refreshPreview();
 			} else {
 				// 等下再设置

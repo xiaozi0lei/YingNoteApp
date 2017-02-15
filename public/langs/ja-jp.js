@@ -231,7 +231,7 @@
   "Sync now": "直ぐに同期",
 
   "Custom server": "カスタム　サーバー",
-  "Host, https://leanote.com": "サーバーアドバイス, 例えば： https://leanote.com",
+  "Host, https://yingnote.cn": "サーバーアドバイス, 例えば： https://yingnote.cn",
   "Username or Email": "名前やメールアドレス",
   "Password": "パスワード",
   "Sign up": "アカウントを作成",

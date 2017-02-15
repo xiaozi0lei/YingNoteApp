@@ -81,7 +81,7 @@ var urlPrefix = UrlPrefix; // window.location.protocol + "//" + window.location.
 			var imgElm;
 			// 先显示loading...
 			d.id = '__mcenew' + (i++);
-			d.src = "http://leanote.com/images/loading-24.gif";
+			d.src = "https://yingnote.cn/images/loading-24.gif";
 			imgElm = dom.createHTML('img', d);
 			tinymce.activeEditor.insertContent(imgElm);
 			imgElm = dom.get(d.id);
@@ -296,7 +296,7 @@ var urlPrefix = UrlPrefix; // window.location.protocol + "//" + window.location.
 	            var jqXHR = data.submit();
 				/*
 				d.id = '__mcenew' + (new Date()).getTime();
-				d.src = "http://leanote.com/images/loading-24.gif"; // 写死了
+				d.src = "https://yingnote.cn/images/loading-24.gif"; // 写死了
 				var img = '<img src="' + d.src + '" id="' + d.id + '" />';
 				editor.insertContent(img);
 				var imgElm = $(d.id);
@@ -317,7 +317,7 @@ var urlPrefix = UrlPrefix; // window.location.protocol + "//" + window.location.
 				var dom = editor.dom;
 				var d = {};						
 				d.id = '__mcenew';
-				d.src = "http://leanote.com/images/loading-24.gif"; // 写死了
+				d.src = "https://yingnote.cn/images/loading-24.gif"; // 写死了
 				editor.insertContent(dom.createHTML('img', d));
 				var imgElm = dom.get('__mcenew');
 			    $.ajax({url: "/file/pasteImage", contentType:false, processData:false , data: c, type: "POST"}

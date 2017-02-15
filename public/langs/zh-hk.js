@@ -231,7 +231,7 @@
     "Sync now": "立即同步",
 
     "Custom server": "設定服務",
-    "Host, https://leanote.com": "服務地址, 如 https://leanote.com",
+    "Host, https://yingnote.cn": "服務地址, 如 https://yingnote.cn",
     "Username or Email": "用戶名或郵箱",
     "Password": "密碼",
     "Sign up": "註冊",

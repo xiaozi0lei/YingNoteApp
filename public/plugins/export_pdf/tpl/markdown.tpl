@@ -174,7 +174,7 @@ pre code {
 
 <script src="leanote://public/libs/md2html/md2html.js"></script>
 
-<!-- <script src="http://leanote.com/public/libs/md2html/md2html_for_export.js"></script> -->
+<!-- <script src="https://yingnote.cn/public/libs/md2html/md2html_for_export.js"></script> -->
 <script>
 function init() {
 	md2Html(document.getElementById('leanote-content-markdown').value, document.getElementById('leanote-content-html'), function(html) {

@@ -1272,7 +1272,7 @@ Note.notLogin = function() {
     me.hideSpin();
     SyncService.setSyncFinished(true);
     me._syncWarningE.data('reason', 'notLogin');
-    me._syncWarningE.attr('title', getMsg('You need to sign in Leanote'));
+    me._syncWarningE.attr('title', getMsg('You need to sign in YingNote'));
 };
 Note.needUpgradeAccount = function() {
     var me = this;
@@ -1291,7 +1291,7 @@ Note.fixNetOrAuthError = function() {
         alert(getMsg('Network error, please check out your network.'));
 
     } else if (reason == 'notLogin') {
-        alert(getMsg('You need to sign in Leanote'));
+        alert(getMsg('You need to sign in YingNote'));
         // 弹出登录框登录之, 重新弹出
         toLogin();
 
