@@ -59,10 +59,6 @@ app.on('activate', function () {
     console.log('activate');
     if (mainWindow) {
         mainWindow.show();
-        // if (mainWindow.isMinimized()) {
-        //     mainWindow.restore();
-        // }
-        // mainWindow.focus();
     }
     // 有时, 重启电脑会出现这种情况
     // Cannot create BrowserWindow before app is ready
@@ -104,7 +100,6 @@ let DB = {
          */
         ipc.on('db-init', function (event, params) {
             db.init(params.curUser, params.dbPath, params.dataBasePath);
-            console.log(params.curUser + params.dbPath + params.dataBasePath);
         });
     }
 };
@@ -177,7 +172,7 @@ function openIt() {
     DB.init();
 
     // 协议
-    var leanoteProtocol = require('leanote_protocol');
+    let leanoteProtocol = require('leanote_protocol');
     leanoteProtocol.init();
 
     // Create the browser window.
@@ -199,7 +194,8 @@ function openIt() {
     });
 
     mainWindow.loadURL(noteUrl);
-    //mainWindow.webContents.openDevTools();
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
     // and load the index.html of the app.
     //mainWindow.loadURL('file://' + __dirname + '/note.html');
 
@@ -220,9 +216,9 @@ function openIt() {
     ipc.on('openUrl', function(event, arg) {
         console.log('openUrl', arg);
 
-        var html = arg.html;
-        var everWindow = mainWindow;
-        var win2 = new BrowserWindow(arg);
+        let html = arg.html;
+        let everWindow = mainWindow;
+        let win2 = new BrowserWindow(arg);
         win2.loadURL('file://' + __dirname + '/' + html);
         mainWindow = win2;
 
@@ -248,7 +244,7 @@ function openIt() {
         }
     }
 
-    var trayShowed = false;
+    let trayShowed = false;
     ipc.on('show-tray', function(event, arg) {
         if (trayShowed) {
             return;
@@ -260,7 +256,7 @@ function openIt() {
         }
 
         appIcon = new Tray(__dirname + '/public/images/tray/' + ( process.platform == 'darwin' ? 'trayTemplate.png' : 'tray.png'))
-        var contextMenu = Menu.buildFromTemplate([
+        let contextMenu = Menu.buildFromTemplate([
             {
                 label: arg.Open, click: function () {
                 show();
@@ -272,7 +268,7 @@ function openIt() {
             }
             },
         ]);
-        appIcon.setToolTip('Leanote');
+        appIcon.setToolTip('YingNote');
         // appIcon.setTitle('Leanote');
         // appIcon.setContextMenu(contextMenu);
 
