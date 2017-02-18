@@ -1215,6 +1215,7 @@ LeaAce = {
 // 全量同步
 function fullSync(callback) {
     log('full sync');
+    console.log('full sync');
     $('.loading-footer').show();
     SyncService.fullSync(function(err, ret) {
         callback && callback(err, ret);

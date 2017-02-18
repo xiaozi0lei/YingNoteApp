@@ -104,6 +104,7 @@ let DB = {
          */
         ipc.on('db-init', function (event, params) {
             db.init(params.curUser, params.dbPath, params.dataBasePath);
+            console.log(params.curUser + params.dbPath + params.dataBasePath);
         });
     }
 };
