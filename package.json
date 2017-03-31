@@ -1,5 +1,9 @@
 {
   "name": "YingNote",
+  "productName": "YingNote",
   "version": "0.0.1",
-  "main": "main.js"
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "1.4.15"
+  }
 }

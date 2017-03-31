@@ -168,6 +168,9 @@ function bindEvents (win) {
 }
 
 function openIt() {
+    // 临时修改 macOS 的 dock icon
+    //app.dock.setIcon(require('path').join(__dirname, 'public/images/dock/icon.png'));
+
     // 数据库
     DB.init();
 
@@ -195,7 +198,7 @@ function openIt() {
 
     mainWindow.loadURL(noteUrl);
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
     // and load the index.html of the app.
     //mainWindow.loadURL('file://' + __dirname + '/note.html');
 
@@ -255,7 +258,8 @@ function openIt() {
             return;
         }
 
-        appIcon = new Tray(__dirname + '/public/images/tray/' + ( process.platform == 'darwin' ? 'trayTemplate.png' : 'tray.png'))
+        appIcon = new Tray(__dirname + '/public/images/tray/' + ( process.platform == 'darwin' ? 'trayTemplate.png' : 'tray.png'));
+
         let contextMenu = Menu.buildFromTemplate([
             {
                 label: arg.Open, click: function () {
